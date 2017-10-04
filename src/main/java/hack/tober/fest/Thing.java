@@ -1,5 +1,12 @@
 package hack.tober.fest;
 
+import spark.ModelAndView;
+import spark.Spark;
+import spark.template.freemarker.FreeMarkerEngine;
+
+import java.util.HashMap;
+import java.util.Map;
+
 import static spark.Spark.*;
 import static spark.Spark.options;
 
@@ -10,17 +17,15 @@ public class Thing {
 
     public static void main(String[] args) {
 
-        get("/simpleget", (req, res) -> "Hello World");
+        Spark.staticFileLocation("/public");
 
-        get("/", (request, response) ->  "Welcome to first page in spark" );
+        get("/simpleget", (req, res) -> "Simple get");
 
-        post("/", (request, response) ->  "" );
-
-        put("/", (request, response) -> "" );
-
-        delete("/", (request, response) -> "" );
-
-        options("/", (request, response) -> "" );
+        get("/", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("message", "Hacktober!");
+            return new FreeMarkerEngine().render(new ModelAndView(attributes, "hello.ftl"));
+        });
 
     }
 

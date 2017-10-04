@@ -27,7 +27,7 @@
         <div class="intro-text">
             <span class="name">go to src</span>
             <hr class="star-light">
-            <span class="skills">For ${message}</span>
+            <span class="skills">${message}</span>
         </div>
     </div>
 </header>

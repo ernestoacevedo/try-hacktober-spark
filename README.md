@@ -12,6 +12,6 @@
 * gradle clean
 * gradle jar
 * java -jar /build/libs/try-hacktober-spark-1.0-SNAPSHOT.jar
-* in browser http://localhost:4567/simpleget
+* in browser http://localhost:4567
 
 > make pull request!

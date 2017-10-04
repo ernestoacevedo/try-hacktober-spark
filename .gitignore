@@ -2,4 +2,5 @@
 .idea/
 build/
 tarjet/
+out/
 *.iml

@@ -1,6 +1,6 @@
 #### Fast Spark implementation with Java and Kotlin o Koltin and Java :D
 
-> Java 7 o higher, and Gradle required.
+> Java 8 and Gradle required.
 
 > Documentation http://sparkjava.com/documentation (very simple).
 

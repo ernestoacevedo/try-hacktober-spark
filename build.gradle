@@ -18,6 +18,7 @@ mainClassName = 'hack.tober.fest.Thing'
 dependencies {
     compile "com.sparkjava:spark-core:2.6.0"
     compile "com.sparkjava:spark-kotlin:1.0.0-alpha"
+    compile 'org.jsoup:jsoup:1.10.3'
     compile group: 'com.sparkjava', name: 'spark-template-freemarker', version: '2.5.5'
     compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
     compile 'org.jsoup:jsoup:1.10.3'

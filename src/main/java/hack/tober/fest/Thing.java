@@ -1,10 +1,14 @@
 package hack.tober.fest;
 
+import java.util.HashMap;
+import java.util.Map;
+
+import hack.tober.fest.search.Search;
+
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.freemarker.FreeMarkerEngine;
-import java.util.HashMap;
-import java.util.Map;
+
 import static spark.Spark.*;
 
 /**
@@ -15,8 +19,13 @@ public class Thing {
     public static void main(String[] args) {
 
         Spark.staticFileLocation("/public");
+        Search searchOn = new Search().getSingletonInstance();
 
-        get("/simpleget", (req, res) -> "Simple get");
+        get("/posts", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            attributes.put("popularpost", searchOn.getSomeEntries());
+            return new FreeMarkerEngine().render(new ModelAndView(attributes, "posts.ftl"));
+        });
 
         get("/", (req, res) -> {
             Map<String, Object> attributes = new HashMap<>();

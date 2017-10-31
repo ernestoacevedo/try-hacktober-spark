@@ -30,7 +30,7 @@
             <#list popularpost as post>
                 <p>${post?counter} ${post}</p>
             <#else>
-                <p>No hay post! :(</p>
+                <p>No hay post! 😢</p>
             </#list>
         </div>
     </div>

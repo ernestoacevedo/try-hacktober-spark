@@ -8,18 +8,18 @@
 
 > How to run?.
 
-* cd try-hacktober-spark
-* gradle clean
-* gradle build
-* gradle run
+* `cd try-hacktober-spark`
+* `gradle `
+* `gradle build`
+* `gradle run`
 * in browser http://localhost:4567
 
 >  Generate jar
 
-* cd try-hacktober-spark
-* gradle clean
-* gradle jar
-* java -jar /build/libs/try-hacktober-spark-1.0-SNAPSHOT.jar
+* `cd try-hacktober-spark`
+* `gradle clean`
+* `gradle jar`
+* `java -jar /build/libs/try-hacktober-spark-1.0-SNAPSHOT.jar`
 * in browser http://localhost:4567
 
 > make pull request!
